@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 const NavBar = () => {
   const router = useRouter();
@@ -40,6 +41,9 @@ const NavBar = () => {
         <Button className="btn dark" onClick={() => router.push("/services")}>
           Enrol Now{" "}
         </Button>
+        <div className="ml-[-30px]">
+          <UserButton afterSignOutUrl="/" />
+        </div>
       </ul>
     </nav>
   );

@@ -1,10 +1,5 @@
 export const navLinks = [
   {
-    label: "Home",
-    route: "/",
-    icon: "/assets/icons/home.svg",
-  },
-  {
     label: "About",
     route: "/about",
     icon: "/assets/icons/about.svg",

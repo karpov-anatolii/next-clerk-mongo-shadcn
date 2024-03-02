@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { Button } from "./ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 const MobileNav = () => {
   const router = useRouter();
@@ -20,20 +21,25 @@ const MobileNav = () => {
         <div onClick={() => router.push("/")} className="logo">
           GD.
         </div>
-        <div
-          onClick={() =>
-            document
-              .querySelector(".mobile-menu-container")!
-              .classList.add("active")
-          }
-          className="menu-icon"
-        >
-          <Image
-            src="/images/menu-smartphone.svg"
-            width={40}
-            height={40}
-            alt=""
-          />
+        <div className="flex-center">
+          <div
+            onClick={() =>
+              document
+                .querySelector(".mobile-menu-container")!
+                .classList.add("active")
+            }
+            className="menu-icon"
+          >
+            <Image
+              src="/images/menu-smartphone.svg"
+              width={40}
+              height={40}
+              alt=""
+            />
+          </div>
+          <div className="ml-[20px]">
+            <UserButton afterSignOutUrl="/" />
+          </div>
         </div>
       </nav>
       <div className="mobile-menu-container">
