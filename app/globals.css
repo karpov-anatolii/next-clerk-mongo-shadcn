@@ -97,7 +97,7 @@
   }
 
   .btn {
-    @apply py-6 px-8 rounded-[22px] text-white  text-[16px]
+    @apply py-2 px-8 rounded-[22px] text-white  text-[16px]
  font-bold relative;
   }
 
@@ -154,6 +154,196 @@
     @apply h-[100vh] w-full flex-center text-[40px] text-white font-black bg-gradient-to-t from-purple_grad-100 to-purple_grad-200;
   }
 
+  /* ====== Testimonials Section */
+  section {
+    @apply mt-[100px];
+  }
+
+  h2 {
+    @apply text-darkBlueColor raleway-black text-[60px] leading-[120%] m-0;
+  }
+
+  h2.light {
+    @apply text-white;
+  }
+
+  section p {
+    @apply text-darkBlueColor text-[16px] font-normal leading-[200%] my-3;
+  }
+
+  .testimonials-section {
+    @apply flex-center gap-[100px];
+  }
+
+  .testimonials-section .mobile-btn {
+    @apply hidden;
+  }
+
+  .testimonials-section .testimonial-card {
+    @apply rounded-[24px]  bg-white shadow-[0_9px_36px_0_rgba(0,0,0,0.2)] w-[432px] mb-[50px] flex flex-col relative;
+  }
+
+  .testimonials-section .testimonial-card img {
+    @apply absolute w-[120px] h-[120px] bottom-[20px] right-[32px];
+  }
+
+  .testimonials-section .testimonial-card::before {
+    content: "";
+    @apply w-7 h-10 absolute top-[-40px] left-[60px] bg-darkBlueColor rounded-[24px_24px_0px_0px];
+  }
+
+  .testimonials-section .testimonial-card:last-child::before {
+    @apply top-[-50px] left-[40px] rounded-[0px_0px_24px_24px] h-[calc(100%+90px)] z-[-1];
+  }
+
+  .testimonials-section .testimonial-card .content {
+    @apply text-white raleway-black text-[18px] leading-[150%] py-6 px-8 bg-lightBlueColor rounded-[24px];
+  }
+
+  .testimonials-section .testimonial-card:last-child .content {
+    @apply bg-orangeColor;
+  }
+
+  .testimonials-section .testimonial-card .info h4 {
+    @apply text-darkBlueColor raleway-black text-[24px] leading-[120%] m-0 mb-2;
+  }
+
+  .testimonials-section .testimonial-card .info p.company {
+    @apply text-darkBlueColor text-[18px] raleway-light leading-[120%] m-0;
+  }
+
+  .testimonials-section .testimonial-card .info {
+    @apply py-6 px-8 bg-white rounded-[24px];
+  }
+
+  .testimonials-section .testimonial-card:last-child {
+    @apply translate-x-[20px];
+  }
+
+  .testimonials-section .features {
+    @apply mb-[30px];
+  }
+
+  /*   Courses Section */
+  .courses-section {
+    background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+    @apply py-[70px] pb-[120px];
+  }
+
+  .courses-section h2 {
+    @apply text-center;
+  }
+
+  .courses-section .course-cards {
+    @apply flex gap-[70px];
+  }
+
+  .courses-section .course-card img {
+    @apply w-full rounded-[24px] shadow-[0_4px_8px_0_rgba(0,0,0,0.25)];
+  }
+
+  .courses-section .course-card {
+    @apply flex-1 px-8 bg-white rounded-[24px] my-[40px] relative;
+  }
+
+  .courses-section .course-card .info {
+    @apply flex-between gap-4 relative;
+  }
+
+  .courses-section .course-card h3 {
+    @apply text-darkBlueColor raleway-black text-[30px] leading-[150%] my-6;
+  }
+
+  .courses-section .course-card .duration {
+    @apply text-darkBlueColor text-[16px] leading-[150%] raleway-black whitespace-nowrap relative pl-[20px];
+  }
+
+  .courses-section .course-card .duration::before {
+    content: url("/image/Clock.svg");
+    @apply absolute top-[2px] left-[-6px];
+  }
+
+  .courses-section .course-card::after {
+    content: "";
+    @apply absolute h-2 bg-darkBlueColor left-8 right-8 bottom-0 rounded-[24px];
+  }
+
+  .courses-section .wrapper {
+    @apply relative;
+  }
+
+  .courses-section .wrapper .btn {
+    @apply absolute right-0;
+  }
+
+  /* App Section */
+  .app-section {
+    @apply text-center py-[100px] px-[148px] m-0;
+  }
+
+  .app-section .app-buttons {
+    @apply flex-center gap-[30px] mt-[24px];
+  }
+
+  .app-section .app-btn {
+    @apply flex-center text-white bg-black min-w-[310px] py-4 px-[31px] gap-[14px];
+  }
+
+  .app-section .app-btn span {
+    @apply text-white text-[20px] font-normal;
+  }
+
+  /* Footer */
+
+  footer {
+    @apply text-white py-[70px] bg-darkColor;
+  }
+
+  footer .links-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr; /* Tailwind cannot create this line. */
+  }
+
+  footer .social {
+    @apply ml-[20px];
+  }
+
+  footer .social a {
+    @apply mr-[28px];
+  }
+
+  footer form {
+    @apply ml-[20px] mt-[16px] relative;
+  }
+
+  footer .copyright {
+    @apply mt-[36px];
+  }
+
+  footer h3 {
+    @apply text-orangeColor;
+  }
+
+  footer a {
+    @apply text-white text-[16px] font-normal leading-[200%];
+  }
+
+  footer ul {
+    @apply list-none pl-[20px];
+  }
+
+  footer li {
+    @apply my-4;
+  }
+
+  footer form input {
+    @apply text-black poppins-normal text-[16px] leading-[200%] rounded-[8px] py-2 pr-[160px] pl-8 border-0 w-full;
+  }
+
+  footer form .submit-btn {
+    @apply absolute top-[50%] right-[5px] translate-y-[-50%] bg-darkBlueColor rounded-[8px]  text-white py-2 px-8 border-0 poppins-normal text-[16px] cursor-pointer;
+  }
+
   /* ===== ALIGNMENTS */
   .flex-center {
     @apply flex justify-center items-center;
@@ -187,7 +377,7 @@
   }
 }
 
-/* ========================================== MEDIA QUERIES */
+/* ========================================== MEDIA QUERIES ======================= */
 
 @media (max-width: 1280px) {
   header,

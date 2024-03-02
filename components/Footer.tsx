@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <p className="copyright">
-          This website is developed by GTCoding © 2021
+          This website is developed by Anatolii Karpov © 2024
         </p>
       </div>
     </footer>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Testimonials = () => {
@@ -13,7 +14,7 @@ const Testimonials = () => {
               <h4>Jane Cooper</h4>
               <p className="company">Developer, Sony</p>
             </div>
-            <img src="images/Ellipse-girl.png" alt="" />
+            <img src="images/Ellipse-girl.png" className="test-image" alt="" />
           </div>
 
           <div className="testimonial-card">
@@ -22,7 +23,7 @@ const Testimonials = () => {
               <h4>Jacob Jones</h4>
               <p className="company">Designer, Facebook</p>
             </div>
-            <img src="images/Ellipse-boy.png" alt="" />
+            <img src="images/Ellipse-boy.png" alt="" className="test-image" />
           </div>
         </div>
 
@@ -39,13 +40,13 @@ const Testimonials = () => {
             </p>
           </div>
 
-          <a href="#" className="btn light desktop-btn">
+          <Link href="/services" className="btn light desktop-btn ">
             Learn More
-          </a>
+          </Link>
         </div>
-        <a href="#" className="btn light mobile-btn">
+        <Link href="/services" className="btn light mobile-btn ">
           Learn More
-        </a>
+        </Link>
       </section>
     </div>
   );

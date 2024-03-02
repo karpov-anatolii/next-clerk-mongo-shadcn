@@ -1,13 +1,25 @@
+"use client";
+
+import Image from "next/image";
 import React from "react";
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 const Courses = () => {
+  const router = useRouter();
   return (
     <section className="courses-section">
       <div className="wrapper">
         <h2 className="light">Our Courses</h2>
         <div className="course-cards">
           <div className="course-card">
-            <img src="images/rectangle-1.png" alt="" />
+            <Image
+              src="/images/rectangle-1.png"
+              className="course-img"
+              width={260}
+              height={260}
+              alt=""
+            />
             <div className="info">
               <h3>Game Design Essentials</h3>
               <div className="duration">
@@ -18,7 +30,13 @@ const Courses = () => {
           </div>
 
           <div className="course-card">
-            <img src="images/rectangle-2.png" alt="" />
+            <Image
+              src="/images/rectangle-2.png"
+              className="course-img"
+              width={260}
+              height={260}
+              alt=""
+            />
             <div className="info">
               <h3>Unity Game Engine Fundamentals</h3>
               <div className="duration">
@@ -28,9 +46,9 @@ const Courses = () => {
             </div>
           </div>
         </div>
-        <a href="#" className="btn light">
+        <Button onClick={() => router.push("/services")} className="btn light">
           All Courses
-        </a>
+        </Button>
       </div>
     </section>
   );
