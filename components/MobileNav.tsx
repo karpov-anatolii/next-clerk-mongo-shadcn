@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { Button } from "./ui/button";
-import { UserButton } from "@clerk/nextjs";
+import { SignedOut, UserButton } from "@clerk/nextjs";
 
 const MobileNav = () => {
   const router = useRouter();
@@ -38,14 +38,33 @@ const MobileNav = () => {
             />
           </div>
           <div className="ml-[20px]">
-            <UserButton afterSignOutUrl="/" />
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: {
+                    width: "50px",
+                    height: "50px",
+                  },
+                },
+              }}
+              afterSignOutUrl="/"
+            />
           </div>
+
+          <SignedOut>
+            <Button
+              className="btn dark "
+              onClick={() => router.push("/sign-in")}
+            >
+              Sign In
+            </Button>
+          </SignedOut>
         </div>
       </nav>
       <div className="mobile-menu-container">
         <div
           onClick={handlerClose}
-          className="absolute top-[32px] right-[100px] cursor-pointer"
+          className="absolute top-[32px] right-[32px] cursor-pointer"
         >
           <Image src="/images/close-menu.svg" width={24} height={24} alt="" />
         </div>

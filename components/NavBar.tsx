@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const NavBar = () => {
   const router = useRouter();
@@ -42,8 +42,27 @@ const NavBar = () => {
           Enrol Now{" "}
         </Button>
         <div className="ml-[-30px]">
-          <UserButton afterSignOutUrl="/" />
+          <UserButton
+            appearance={{
+              elements: {
+                avatarBox: {
+                  width: "50px",
+                  height: "50px",
+                },
+              },
+            }}
+            afterSignOutUrl="/"
+          />
         </div>
+
+        <SignedOut>
+          <Button
+            className="btn dark ml-[-35px]"
+            onClick={() => router.push("/sign-in")}
+          >
+            Sign In
+          </Button>
+        </SignedOut>
       </ul>
     </nav>
   );
