@@ -151,7 +151,7 @@
   }
 
   .page-container {
-    @apply h-[100vh] w-full flex-center text-[40px] text-white font-black bg-gradient-to-t from-purple_grad-100 to-purple_grad-200;
+    @apply min-h-[100vh] w-full flex-center text-[40px] text-white font-black bg-gradient-to-t from-purple_grad-100 to-purple_grad-200;
   }
 
   /* ====== Testimonials Section */
